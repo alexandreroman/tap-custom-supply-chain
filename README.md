@@ -11,6 +11,7 @@ In this example, we're about to add a label for the author of every workloads.
 Make sure you have the following tools available on your workstation:
 
 - `ytt` and `imgpkg` from the [Carvel toolsuite](https://carvel.dev/)
+- `kubectl` configured on a Kubernetes cluster having TAP already installed.
 - a Docker daemon (you may use [Docker Desktop](https://www.docker.com/products/docker-desktop/))
 
 
