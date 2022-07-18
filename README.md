@@ -124,8 +124,8 @@ ytt --ignore-unknown-comments -f custom-supply-chain/supply-chain-author.yaml \
 Don't forget to replace `REGISTRY-SERVER` and `REGISTRY-REPOSITORY` with the values
 you used in your TAP configuration file (tap-values.yaml)
 
-Sample 
-```tap-values.yaml
+tap-values.yaml sample 
+```yaml
 ootb_supply_chain_basic:
   registry:
     server: "harbor.mytanzu.xyz"          <---- REGISTRY-SERVER
