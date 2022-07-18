@@ -22,7 +22,7 @@ kubectl get app ootb-templates -n tap-install  -o "jsonpath={.spec.fetch[0].imgp
 
 imgpkg pull \
   -b <replace_with_the_output_of_previous_command:registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:f2ad401bb3e850940...> \
-  -o ootb-supply-chain-basic
+  -o ootb-templates
 
 ```
 
