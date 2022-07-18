@@ -18,16 +18,8 @@ Make sure you have the following tools available on your workstation:
 to download the configuration for the existing out-of-the-box supply chain and its templates.
 
 ```shell
-kubectl get app ootb-templates -n tap-install  -o "jsonpath={.spec.fetch[0].imgpkgBundle.image}"
-imgpkg pull \
-  -b <replace_with_the_output_of_previous_command:registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:f2ad401bb3e850940...> \
-  -o ootb-templates
-  
-  
-kubectl get app ootb-supply-chain-basic -n tap-install  -o "jsonpath={.spec.fetch[0].imgpkgBundle.image}"
-imgpkg pull \
-  -b <replace_with_the_output_of_previous_command:registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:f2ad401bb3e850940...> \
-  -o ootb-supply-chain-basic
+imgpkg pull -b $(kubectl get app ootb-templates -n tap-install  -o "jsonpath={.spec.fetch[0].imgpkgBundle.image}") -o ootb-templates
+imgpkg pull -b $(kubectl get app ootb-supply-chain-basic -n tap-install  -o "jsonpath={.spec.fetch[0].imgpkgBundle.image}") -o ootb-supply-chain-basic
 ```
 
 You should end up with 2 directories:
